@@ -1,0 +1,44 @@
+{
+    "name": "tyhpdef/phpseclib-phpseclib-impl",
+    "description": "Implementation package for tyhpdef/phpseclib-phpseclib. Require tyhpdef/phpseclib-phpseclib, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "4.0.1.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/paragonie-constant_time_encoding": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/phpseclib-phpseclib"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "phpseclib/phpseclib": "^4.0",
+        "tyhpdef/paragonie-constant_time_encoding": "^3.0"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/paragonie-constant_time_encoding": "@dev"
+    }
+}
